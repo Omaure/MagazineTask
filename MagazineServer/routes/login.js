@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
                         const result = await userModel.findByIdAndUpdate(currentUser[0]._id, currentUser[0]);
                         res.send({user: {'name': currentUser[0].fullName}, token: signToken});
                     }
-                    res.send({user: {'name': currentUser[0].fullName}, token: currentUser[0].token});
+                    res.status(200).send({user: {'name': currentUser[0].fullName}, token: currentUser[0].token});
 
                 } else {
                     res.send(401, "Invalid Information");

@@ -28,7 +28,6 @@ router.post('/', async (req, res) => {
 
 router.use(checkJWT);
 
-
 router.get('/', async (req, res) => {
 
     try {
@@ -38,7 +37,7 @@ router.get('/', async (req, res) => {
         } else {
             results = await UserModel.find({}).exec()
         }
-        res.json(results)
+        res.status(200).json(results)
     } catch (error) {
         console.log(error);
         res.send(404, {
@@ -51,7 +50,7 @@ router.delete('/:id', async (req, res) => {
     try {
         let id = req.params.id;
         let results = await UserModel.findByIdAndDelete(id).exec();
-        res.json(results);
+        res.status(200).json(results);
     } catch (error) {
         console.log(error);
         res.send(404, {
@@ -64,9 +63,8 @@ router.patch('/:id', async (req, res) => {
     try {
         let id = req.params.id;
         console.log(req.body);
-
         let results = await UserModel.findByIdAndUpdate(id, req.body, {new: true}).exec();
-        res.json(results)
+        res.status(200).json(results)
     } catch (error) {
         console.log(error);
         res.send(404, {
