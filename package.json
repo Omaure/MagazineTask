@@ -1,0 +1,16 @@
+{
+  "name": "MagazineTask",
+  "version": "1.0.0",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "latest",
+    "express": "^4.17.1",
+    "mongoose": "latest"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "cors": "^2.8.5",
+    "helmet": "^3.23.3",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
