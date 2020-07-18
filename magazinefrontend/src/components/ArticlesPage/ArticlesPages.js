@@ -32,24 +32,6 @@ export default function ArticlesPage() {
         })
     };
 
-    const updateAnArticle = (articleId, description, title) => {
-        axios
-        ({
-            method: 'patch',
-            url: `http://localhost:3100/article/${articleId}`,
-            data: {description, title},
-            headers: {'JWT': localStorage.getItem('token')}
-        }).then((res) => {
-            console.log(res);
-            console.log(res.data);
-            if (res.data.error) {
-                console.log("error");
-            } else {
-                setArticles();
-            }
-        })
-    };
-
     const setArticles = () => {
         axios
         ({
@@ -89,7 +71,7 @@ export default function ArticlesPage() {
                     Your Articles
                 </h1>
             </div>
-            <Button color="red">
+            <Button color="black">
                 <Link to='/create'>Create Article</Link>
             </Button>
 
@@ -104,16 +86,24 @@ export default function ArticlesPage() {
                                 <MDBCard className='h-600'>
                                     <MDBCardBody>
                                         <MDBCardTitle className='text-center font-weight-bold'>
+                                            {currentArticle.title}
                                         </MDBCardTitle>
                                         <MDBCardText className='font-weight-bold'>
                                             {currentArticle.description.slice(0, 100) + "..."}
                                         </MDBCardText>
                                     </MDBCardBody>
-                                    <MDBBtn onClick={(e)=>{
+                                    <MDBBtn onClick={(e) => {
                                         deleteAnArticle(currentArticle._id);
                                     }}>
                                         Delete Article
                                     </MDBBtn>
+                                    <Button>
+                                        <Link to={`/update/${currentArticle._id}`}>
+                                            Update Article
+                                        </Link>
+                                    </Button>
+
+
                                 </MDBCard>
                             </MDBCol>
                         )

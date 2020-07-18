@@ -7,6 +7,7 @@ import HomePage from './components/HomePage/Homepage';
 import NavbarPage from './components/Navbar/Navbar';
 import NotFound from "./components/NotFound/NotFoundPage";
 import NewArticle from "./components/NewArticle/NewArticle";
+import UpdateArticle from "./components/UpdateArticle/UpdateArticle";
 import ArticlesPage from "./components/ArticlesPage/ArticlesPages";
 
 import logo from './logo.svg';
@@ -48,6 +49,7 @@ function App(props) {
                         <Route path="/" exact component={HomePage}/>
                         <Route path="/articles" component={ArticlesPage}/>
                         <Route path="/create" component={NewArticle}/>
+                        <Route path="/update/:articleId" component={UpdateArticle} />
                         <Route path="*" component={NotFound}/>
                     </Switch>
                 </div>
