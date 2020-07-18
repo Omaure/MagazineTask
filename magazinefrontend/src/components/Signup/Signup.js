@@ -55,9 +55,24 @@ export default function RegistrationPage() {
             dispatch(signUserUp(userFullName, email, password));
         }
     };
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            validateRegistration(
+                firstName,
+                lastName,
+                email,
+                confirmEmail,
+                password,
+                confirmPassword
+            );
+        }
+    };
+
     return (
 
-        <div style={{width: '50%', marginTop: "5%", marginLeft: "auto", marginRight: "auto"}}>
+        <div onKeyPress={handleKeyDown}
+             style={{width: '50%', marginTop: "5%", marginLeft: "auto", marginRight: "auto"}}>
             <MDBCard
                 className="card-image signupForm w-100 h-100"
                 style={{

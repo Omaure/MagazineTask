@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
-import {MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput} from 'mdbreact';
+import {MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon} from 'mdbreact';
 import axios from "axios";
-import {Link} from "react-router-dom";
 export default function UpdateArticle(props) {
 
     const [title, setTitle] = useState("");

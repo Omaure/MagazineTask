@@ -3,7 +3,6 @@ import axios from "axios";
 import {
     MDBBtn, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCol, MDBRow
 } from "mdbreact";
-import {FaJoint, IoMdRemoveCircle} from "react-icons/all";
 import './ArticlesPage.css';
 
 import {Link} from "react-router-dom";

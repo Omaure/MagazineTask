@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput} from 'mdbreact';
+import {MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon} from 'mdbreact';
 import axios from "axios";
 
 export default function NewArticle(props) {

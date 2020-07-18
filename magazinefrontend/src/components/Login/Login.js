@@ -18,9 +18,16 @@ export default function LoginPage() {
 
     const dispatch = useDispatch();
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            dispatch(fetchUser(email, password))
+        }
+    };
+
     return (
 
-        <div style={{width: '50%', marginTop: "10%", marginLeft: "auto", marginRight: "auto"}}>
+        <div onKeyPress={handleKeyDown}
+             style={{width: '50%', marginTop: "10%", marginLeft: "auto", marginRight: "auto"}}>
             <MDBCard
                 className="card-image signupForm w-100 h-100"
                 style={{
