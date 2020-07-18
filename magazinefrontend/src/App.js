@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import {useDispatch, useSelector, useStore} from "react-redux";
-import {render} from "react-dom";
+import {useStore} from "react-redux";
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import WelcomePage from './components/WelcomePage/WelcomePage';
 import HomePage from './components/HomePage/Homepage';
@@ -9,9 +8,6 @@ import NotFound from "./components/NotFound/NotFoundPage";
 import NewArticle from "./components/NewArticle/NewArticle";
 import UpdateArticle from "./components/UpdateArticle/UpdateArticle";
 import ArticlesPage from "./components/ArticlesPage/ArticlesPages";
-
-import logo from './logo.svg';
-
 import './App.css';
 
 function App(props) {

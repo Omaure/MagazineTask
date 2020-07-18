@@ -7,7 +7,6 @@ import {FaJoint, IoMdRemoveCircle} from "react-icons/all";
 import './ArticlesPage.css';
 
 import {Link} from "react-router-dom";
-import NewArticle from "../NewArticle/NewArticle";
 import Button from "react-bootstrap/Button";
 
 
@@ -86,7 +85,7 @@ export default function ArticlesPage() {
                                 <MDBCard className='h-600'>
                                     <MDBCardBody>
                                         <MDBCardTitle className='text-center font-weight-bold'>
-                                            {currentArticle.title}
+                                            {"Title:"+ currentArticle.title}
                                         </MDBCardTitle>
                                         <MDBCardText className='font-weight-bold'>
                                             {currentArticle.description.slice(0, 100) + "..."}

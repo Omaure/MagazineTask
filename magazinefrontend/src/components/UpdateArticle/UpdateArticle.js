@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import {MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput} from 'mdbreact';
 import axios from "axios";
 import {Link} from "react-router-dom";
-
 export default function UpdateArticle(props) {
 
     const [title, setTitle] = useState("");
@@ -11,8 +10,6 @@ export default function UpdateArticle(props) {
     const {
         match: {params},
     } = props;
-    console.log(params.articleId);
-
 
     const getCurrentArticle = (currentArticleId) => {
         axios
@@ -45,7 +42,8 @@ export default function UpdateArticle(props) {
             if (res.data.error) {
                 console.log("error");
             } else {
-                alert("Article Updated")
+                alert("Article Updated");
+                props.history.push('/articles');
             }
         })
     };

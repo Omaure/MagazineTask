@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {MDBBtn, MDBCard, MDBCardBody, MDBCardFooter, MDBCardText, MDBCardTitle, MDBCol, MDBRow} from "mdbreact";
-import {Carousel} from "react-bootstrap";
-import {useDispatch, useStore} from "react-redux";
+import { useStore} from "react-redux";
 import {FcNext, FcPrevious} from "react-icons/all";
 import './Homepage.css'
 import {Link} from "react-router-dom";
@@ -11,13 +10,12 @@ export default function HomePage() {
 
     const [currentArticles, setArticles] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const dispatch = useDispatch();
 
     const store = useStore();
 
     console.log(store.getState().loggedIn);
 
-    const getSubs = async () => {
+    const getArticles = async () => {
         console.log(currentPage);
         axios({
             method: 'get',
@@ -35,7 +33,7 @@ export default function HomePage() {
     };
 
     useEffect(() => {
-        getSubs();
+        getArticles();
     }, [currentPage]);
 
     const incrementPage = (index) => {
