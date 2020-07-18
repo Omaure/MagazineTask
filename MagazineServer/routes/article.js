@@ -17,11 +17,15 @@ router.post('/', async (req, res) => {
     console.log("Creating an Article", req.body);
 
     try {
+        let results = "";
+        results = await UserModel.find({token: req.header("JWT")}).exec();
+
         const newArticle = new ArticleModel({
             title: req.body.title,
             description: req.body.description,
-            authorId: req.body.authorId,
+            authorId: results[0]._id,
         });
+
         const article = await newArticle.save();
         res.status(201).json(article);
     } catch (error) {
@@ -111,7 +115,6 @@ router.patch('/:articleId', async (req, res) => {
     try {
         let articleId = req.params.articleId;
         console.log(req.body);
-
         let results = await ArticleModel.findByIdAndUpdate(articleId, req.body, {new: true}).exec();
         res.json(results);
     } catch (error) {

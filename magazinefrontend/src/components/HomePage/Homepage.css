@@ -1,0 +1,13 @@
+.hi{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 40px;
+}
+
+.paragraphs{
+    font-family: Papyrus, fantasy; font-size: 49px; font-style: italic; font-variant: small-caps; font-weight: 700; line-height: 49px;
+}
+
+.mycard{
+    height: 600px;
+}

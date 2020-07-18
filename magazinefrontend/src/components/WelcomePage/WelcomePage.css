@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+
+.WelcomePage {
+    height: 100vh !important;
+    background-color: rgba(198, 210, 214, 1);
+}
+
+/*#navbar {*/
+/*    background-color: #247BA0;*/
+/*    height: 10%;*/
+/*}*/
+
+/*.navlink {*/
+/*    color: #F3FFBD !important;*/
+/*}*/
+
+/*.navbarSpan {*/
+/*    color: #F3FFBD !important;*/
+/*    font-family: 'Raleway', sans-serif;*/
+/*    font-size: 40px;*/
+/*    padding: 0 !important;*/
+/*    text-transform: lowercase !important;*/
+/*}*/
+
+.containerr {
+    width: 100vw !important;
+    max-width: 100% !important;
+    height: 65%;
+    /*background-image: url('../../images/openbookbg.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(23, 23, 24, 0.24);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#quote {
+    background-color: rgba(23, 23, 24, 0.24);
+}
+
+#quote > h1 {
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    color: mintcream;
+    font-size: 70px !important;
+}
+
+.loginForm {
+    background-image: url("https://previews.123rf.com/images/microone/microone1812/microone181200305/112856531-sketch-vintage-books-seamless-pattern-or-background-sketch-education-seamless-book-for-school-litera.jpg");
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: solid grey 2px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.form-label {
+    text-align: left !important;
+}
+
+.about {
+    height: 35%;
+    font-family: 'Source Serif Pro', serif;
+
+}
+
+.signinIcons {
+    height: 15%;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.signinSpan {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 20px;
+}
+
+.signinIcons {
+    text-align: center;
+}
+
+.tabsTitle {
+    color: #247BA0 !important;
+}
+
+.tabsTitle > .active {
+    background-color: rgba(198, 210, 214, 0.5) !important;
+    color: white !important;
+}
+
+/* Required for full background image */
+
+/* Required for full background image */
+
+
+/*.top-nav-collapse, .page-footer {*/
+/*    background-color: #563e91 !important;*/
+/*}*/
+
+/*.navbar:not(.top-nav-collapse) {*/
+/*    background: transparent !important;*/
+/*}*/
+
+.rgba-gradient {
+    background: rgba(35, 7, 77, 0.6);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(204, 83, 51, 0.6), rgba(35, 7, 77, 0.6));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(204, 83, 51, 0.6), rgba(35, 7, 77, 0.6));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.img-gradient:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(220, 66, 37, 0.5)), color-stop(100%, rgba(0, 47, 75, 0.5)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+    /* Opera 11.10+ */
+    /* IE10+ */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 47, 75, 0.5)), to(rgba(220, 66, 37, 0.5)));
+    background: linear-gradient(to bottom, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+    /* IE6-9 */
+}
