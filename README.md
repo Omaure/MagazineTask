@@ -22,10 +22,14 @@
     - open Magazine Server
     - npm install 
     - nodemon index.js
-- testing (unit test) :
+- testing Nodejs (unit test) :
     - open Magazine Server
     - npm install
     - npm run test
+- React :
+    - open magazinefrontend folder
+    - npm install
+    - npm start
 
 # Features
 - Login
@@ -38,6 +42,14 @@
 
 # Built With
 -- [MongoDB](https://www.mongodb.com/) Database
+
+-- [React](https://reactjs.org/) Frontend
+
+-- [MDBReact](https://mdbootstrap.com/docs/react/) Frontend
+
+-- [SemanticUI React](https://react.semantic-ui.com/ ) Frontend
+
+-- [React Redux](https://redux.js.org/) Frontend
 
 -- [NodeJS](https://nodejs.org/en/) Backend
 
