@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
                         currentUser[0].token = signToken;
                         //save new Token
                         const result = await userModel.findByIdAndUpdate(currentUser[0]._id, currentUser[0]);
-                        res.send({user: {'name': currentUser[0].fullName}, token: signToken});
+                        res.status(200).send({user: {'name': currentUser[0].fullName}, token: signToken});
                     }
                     res.status(200).send({user: {'name': currentUser[0].fullName}, token: currentUser[0].token});
 

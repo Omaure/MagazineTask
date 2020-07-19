@@ -43,7 +43,7 @@ router.get('/all', async (req, res) => {
             .populate("authorId", "fullName")
             .exec();
 
-        res.json(results);
+        res.status(200).json(results);
     } catch (error) {
         console.log(error);
         res.send(404, {
