@@ -11,7 +11,7 @@ const conn = require('../MagazineServer/utils/db');
 * Testing Signup, Login, Article CRUD operations
 * */
 
-describe('GET /user', () => {
+describe('Signup, Login, Article CRUD operations /user /article /login', () => {
     before((done) => {
         conn.open()
             .then(() => done())
